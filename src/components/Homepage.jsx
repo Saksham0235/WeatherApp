@@ -5,15 +5,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import AirIcon from '@mui/icons-material/Air';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-
-
-
-const key = `6cfc6fdbcc16b0174437086f151442b7`
-
 function Homepage() {
 
   const [data, setData] = useState({});
   const [location, setLocation] = useState("")
+  
 
 
   const url = `http://api.weatherapi.com/v1/current.json?key=41086c4a7c7a475a94074000240506&q=${location}&aqi=no`
@@ -22,8 +18,8 @@ function Homepage() {
     // const response = await fetch(url)
     // setData(response.data)
     e.preventDefault();
-    fetch(url).then(response => response.json()).then(response => setData(response))
-    // axios.get(url).then(response=>{setData(response.data);console.log(response.data,"from response");})
+    // fetch(url).then(response => response.json()).then(response => setData(response))
+    axios.get(url).then(response=>{setData(response.data);console.log(response.data,"from response");})
     setLocation("")
   }
 
@@ -55,8 +51,6 @@ function Homepage() {
   var datetime = daysOfWeek[currentdate.getDay() - 1] + ", " + months[(currentdate.getMonth())] + " " + currentdate.getDate() + suffixDate + " ,"
     + currentdate.getHours() + ":"
     + currentdate.getMinutes() + " " + ampm
-
-  console.log(data,);
 
   return (
     <div className='container'>
