@@ -1,0 +1,101 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  
+}
+
+.container:before {
+  content: "";
+  background: url("https://cdn.pixabay.com/photo/2015/10/05/18/15/moon-973077_640.jpg") no-repeat center center/cover;
+  position: absolute;
+  width: 100vw;
+  top:0;
+  left: 0;
+  height: 100%;
+  z-index:-1
+}
+
+.main{
+    display: flex;
+    border: 1px solid white;
+    /* background-color: rgba(77, 38, 38, 0.9); */
+    background: url('https://cdn.pixabay.com/photo/2018/05/03/12/15/nature-3371223_1280.jpg') no-repeat center center/cover;
+    color: antiquewhite;
+    max-width:550px;
+    height:500px;
+    text-align: center;
+    margin:auto;
+    padding: 0 1rem;
+    margin-top: 25px;
+    border-radius: 20px;
+    border: none;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.top{
+    width:275px;
+    margin:1rem auto
+}
+.bottom{
+    width: 275px;
+}
+
+.description{
+   margin-top: 35px;
+}
+.date{
+margin-top: 10px;
+}
+.div{
+    display:flex;
+    justify-content: space-between;
+    margin:auto;
+    margin-top: 3rem;
+    background-color: rgba(74, 172, 218, 0.2);
+    align-items: center;
+    padding: 5px;
+    height: 2.5rem;
+    width:300px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.div input{
+    border-radius: 10px;
+    border:none;
+    outline: none;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 550;
+    width: 280px;
+    padding: 10px;
+    color: rgb(20, 1, 1);
+    background: transparent;
+}
+::placeholder{
+    color: black;
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+.temp{
+    margin-top: 20px;
+}
+
+.wind{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.location{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+}

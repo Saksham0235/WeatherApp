@@ -1,0 +1,46 @@
+{
+    "coord": {
+        "lon": 75.85,
+        "lat": 30.9
+    },
+    "weather": [
+        {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 305.29,
+        "feels_like": 303.26,
+        "temp_min": 305.29,
+        "temp_max": 305.29,
+        "pressure": 999,
+        "humidity": 20,
+        "sea_level": 999,
+        "grnd_level": 972
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.51,
+        "deg": 35,
+        "gust": 3.99
+    },
+    "clouds": {
+        "all": 85
+    },
+    "dt": 1717530571,
+    "sys": {
+        "type": 2,
+        "id": 2081961,
+        "country": "IN",
+        "sunrise": 1717545199,
+        "sunset": 1717595834
+    },
+    "timezone": 19800,
+    "id": 1264728,
+    "name": "Ludhiana",
+    "cod": 200
+}
