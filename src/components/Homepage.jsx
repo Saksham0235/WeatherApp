@@ -1,25 +1,34 @@
 import React, { useEffect, useState } from 'react'
 import "./home.css"
-import axios from 'axios'
+    // setData(response.data)import axios from 'axios'
 import SearchIcon from '@mui/icons-material/Search';
 import AirIcon from '@mui/icons-material/Air';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { fetchData } from './Api';
 
 function Homepage() {
 
   const [data, setData] = useState({});
   const [location, setLocation] = useState("")
+  const key=`41086c4a7c7a475a94074000240506`
   
 
 
-  const url = `http://api.weatherapi.com/v1/current.json?key=41086c4a7c7a475a94074000240506&q=${location}&aqi=no`
+  const url = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${location}&aqi=no`
 
-  const fetchWeather = (e) => {
-    // const response = await fetch(url)
-    // setData(response.data)
+
+  const fetchWeather=async(e)=>{
     e.preventDefault();
-    // fetch(url).then(response => response.json()).then(response => setData(response))
-    axios.get(url).then(response=>{setData(response.data);console.log(response.data,"from response");})
+    try{
+    const response=  await fetchData(location);
+    console.log(response,"From response");
+    setData(response.data)
+    }
+    catch(e)
+    {
+      // enqueueSnackbar(`Failed to delete board : ${error.message} `, { variant:'error' });
+      console.log(e,"Error in fetching data");
+    }
     setLocation("")
   }
 
